@@ -4,9 +4,20 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Cities</title>
+    <script asp-src-include="/lib/jquery/dist/**/*.js"></script>
     <link asp-href-include="lib/bootstrap/dist/css/*.min.css" rel="stylesheet"/>
 </head>
 <body class="m-1 p-1">
+<environment names="development">
+    <div class="m-1 p-1 bg-info">
+        <h2>This is Development</h2>
+    </div>
+</environment>
+<environment names="production">
+    <div class="m-1 p-1 bg-danger">
+        <h2>This is Production</h2>
+    </div>
+</environment>
 <div>
     @RenderBody()
 </div>
