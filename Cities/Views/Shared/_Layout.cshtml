@@ -4,12 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Cities</title>
-    <script asp-src-include="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js" 
-            asp-fallback-src-include="/lib/jquery/dist/**/*.min.js" 
-            asp-fallback-src-exclude="**.slim**" 
-            asp-fallback-test="window.jQuery">
-    </script>
-    <link asp-href-include="lib/bootstrap/dist/css/*.min.css" rel="stylesheet"/>
+    <link asp-href-include="lib/bootstrap/dist/**/*.min.css" asp-href-exclude="**/*-reboot*, **/*-grid*" rel="stylesheet"/>
 </head>
 <body class="m-1 p-1">
 <div>
