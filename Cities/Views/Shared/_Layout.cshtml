@@ -8,7 +8,9 @@
 </head>
 <body class="m-1 p-1">
 <div>
-    <img src="images/GemCityIT-Green.png" asp-append-version="true"/>
+    <cache expires-sliding="@TimeSpan.FromSeconds(5)" vary-by="@ViewContext.RouteData.Values["action"]">
+        @await Component.InvokeAsync("Time")
+    </cache>
     @RenderBody()
 </div>
 </body>
