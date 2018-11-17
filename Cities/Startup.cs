@@ -16,10 +16,14 @@ namespace Cities
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            app.UseStatusCodePages();
-            app.UseDeveloperExceptionPage();
-            app.UseStaticFiles();
-            app.UseMvcWithDefaultRoute();
+            app.Map("/mvcapp", appBuilder =>
+            {
+                appBuilder.UseStatusCodePages();
+                appBuilder.UseDeveloperExceptionPage();
+                appBuilder.UseStaticFiles();
+                appBuilder.UseMvcWithDefaultRoute();
+            });
+
         }
     }
 }
